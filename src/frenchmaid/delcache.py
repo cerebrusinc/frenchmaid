@@ -58,7 +58,12 @@ def loopDirs(main_dir, dir_arr, num_pycache, dir_arr_used):
 
 def pyCacheOnly(dir_main):
     try:
-        dir_name = str(dir_main)[str(dir_main).rfind("\\")+1:len(dir_main)]
+        
+        if platf == "win32":
+            dir_name = str(dir_main)[str(dir_main).rfind("\\")+1:len(dir_main)]
+        else:
+            dir_name = str(dir_main)[str(dir_main).rfind("/")+1:len(dir_main)]
+            
         dirs = os.listdir(dir_main)
         num_dirs = len(dirs)
         arr = []
