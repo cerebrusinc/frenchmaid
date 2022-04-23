@@ -1,6 +1,6 @@
 # French Maid v0.1.1
 
-Are you a python developer who also/only uses windows and are sick are tired of constantly deteting those pesky `__pycache__` directories? Fear not, **frenchmaid** is here to help! frenchmaid is a CLI tool written in pure python that will look in your entire project directory and delete any `__pycache__` folders (and the files within) in your app directory.
+Are you a python developer who also/only uses windows and are sick are tired of constantly deteting those pesky `__pycache__` directories? Fear not, **frenchmaid** is here to help! frenchmaid is a CLI tool written in pure python that will search your entire project directory and delete any `__pycache__` folders (and the files within) in your root directory.
 
 ## Installation
 
@@ -9,6 +9,14 @@ Are you a python developer who also/only uses windows and are sick are tired of 
 or
 
     pip3 install frenchmaid
+
+## Update
+
+    pip install --upgrade frenchmaid
+
+or
+
+    pip3 install --upgrade frenchmaid
 
 ## Usage
 
@@ -23,7 +31,7 @@ _Windows based machines:_
     C:\Users\<user>\Documents\example-app> frenchmaid clean
 
 <br>
-It's really that simple, just ensure that you are in you project's root folder! For clarity, the above example assumes that your project structure is something like this for example:
+It's really that simple, just ensure that you are in you project's root directory! For clarity, the above example assumes that your project structure is something like this for example:
 <br><br>
 
     example-app/
@@ -49,7 +57,7 @@ or
 
 will return (for example):
 
-    French Maid v0.1.0
+    French Maid v0.1.1
 
 #### Help
 
@@ -81,7 +89,7 @@ You can report any bugs or improvements [here](https://github.com/lewisjr/home-a
 
 ## v0.1.1
 
-Minor patch to codebase; Issue on linux machines fixed with directory name post pycache delete. The package no longer display the root directory's full absolute path (e.g Documents/example-app), but rather just the root directory's name (e.g example-app) on linux machines.
+Minor patch to codebase; Issue on linux machines fixed with directory name post pycache delete. The package no longer displays the root directory's full absolute path (e.g Documents/example-app), but rather just the root directory's name (e.g example-app) on linux machines.
 
 ## v0.1.0
 
