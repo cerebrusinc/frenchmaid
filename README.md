@@ -1,4 +1,4 @@
-# French Maid v0.1.1
+# French Maid v0.1.2
 
 Are you a python developer who also/only uses windows and are sick are tired of constantly deteting those pesky `__pycache__` directories? Fear not, **frenchmaid** is here to help! frenchmaid is a CLI tool written in pure python that will search your entire project directory and delete any `__pycache__` folders (and the files within) in your root directory.
 
@@ -9,6 +9,29 @@ Are you a python developer who also/only uses windows and are sick are tired of 
 or
 
     pip3 install frenchmaid
+
+<details>
+<summary>Windows 10 PATH Error</summary>
+
+If you encounter a path error on your CMD after running one of the commands above (e.g one about not finding a frenchmaid.exe or the frenchmaid.exe not being on PATH), carry out the following steps:
+
+1.  Uninstall frenchmaid
+
+        pip uninstall frenchmaid
+
+2.  Open a new terminal as admin
+
+    1. Open the start menu (press the windows button)
+    2. Search for CMD
+    3. Right click and select run as administrator
+
+3.  Install frenchmaid globally
+
+        pip install frenchmaid
+
+Remember not to use the `--user` flag unless you have set this option on path as well.
+
+ </details>
 
 ## Update
 
@@ -57,7 +80,7 @@ or
 
 will return (for example):
 
-    French Maid v0.1.1
+    French Maid v0.1.2
 
 #### Help
 
@@ -86,6 +109,10 @@ will return:
 You can report any bugs or improvements [here](https://github.com/lewisjr/home-app/issues), I will try to address them as soon as possible. Feel free to suggest any other files or folders you think it should delete (e.g .pytest_cache) with all context on how they appear. I will happily make it a possiblity without breaking the current format! To the best of my abilites of course, and the github page will be updated on any changes.
 
 # Version History
+
+## v0.1.2
+
+Minor patch 2; License has been updated to Apache from MIT effective from the date of this release. Notes on potential path problems that can arise from installation on Windows have been added to the README.
 
 ## v0.1.1
 
