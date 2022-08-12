@@ -1,12 +1,12 @@
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+with open("README.md", "r", encoding="utf-8") as f:
+    long_description = f.read()
 
 setuptools.setup(
     name="frenchmaid",
-    version="0.1.2",
-    description="Remove all pests from your project! frenchmaid is a lightweight all platform cli package that will delete all __pycache__ folders (contents included) in your project directory. Are you tired of doing it manually each time? Fear not, the frenchmaid will do it for you!",
+    version="0.2.0",
+    description="Remove all pests from your project! frenchmaid is a lightweight all platform cli package that will delete all pycache and other folders (contents included) in your project directory. Are you tired of doing it manually each time? Fear not, the frenchmaid will do it for you!",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/lewisjr/frenchmaid.git",
@@ -21,11 +21,11 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Topic :: Utilities",
         "Development Status :: 5 - Production/Stable",
-        "Environment :: Web Environment",
+        "Environment :: Console",
         "Intended Audience :: Developers",
-
+        "Typing :: Typed"
     ],
-    packages=["frenchmaid"],
+    packages=["frenchmaid", "frenchmaid.modules", "frenchmaid.switches"],
     include_package_data=True,
     install_requires=["click", "colorama", "typer"],
     entry_points={

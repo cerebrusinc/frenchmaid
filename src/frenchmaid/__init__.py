@@ -1,6 +1,6 @@
 
-__app_name__ = "French Maid"
-__version__ = "0.1.1"
+__app_name__ = "frenchmaid"
+__version__ = "0.2.0"
 
 
 (
