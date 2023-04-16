@@ -2,7 +2,7 @@
     <img src="https://static.wixstatic.com/media/916fb4_88bd4d4d46e14f0c90f64213970c3a2d~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/916fb4_88bd4d4d46e14f0c90f64213970c3a2d~mv2.png" alt="frenchmaid logo" width="250" height="250" />
 </p>
 
-# frenchmaid v0.2.1
+# frenchmaid v0.2.3
 
 Are you a python developer who also/only uses windows and are sick and tired of constantly deteting those pesky `__pycache__` directories? Fear not, **frenchmaid** is here to help! frenchmaid is a CLI app written in pure python that will search your entire project directory and delete any `__pycache__` or other folders (and the files within) in your root directory. Now it can also add these folders to your ignore files!
 
@@ -143,7 +143,7 @@ or
 
 will return (for example):
 
-    frenchmaid v0.2.1
+    frenchmaid v0.2.3
 
 ### Help
 
@@ -178,13 +178,25 @@ You can report any bugs or improvements [here](https://github.com/lewisjr/home-a
 ## v0.2.x
 
 <details open>
-<summary><strong>v0.2.1</strong></summary>
+<summary><strong>v0.2.3</strong></summary>
 
 - Codebase improvements
 - Full parity between `windows` and `linux` systems; **Full Stability**
 - Added .gitignore
 - README structure changed
 - Note added to v0.2.0 to denote it's instability
+</details>
+
+<details>
+<summary><strong>v0.2.2</strong></summary>
+
+- Updated README version history to include v0.2.1 updates
+</details>
+
+<details>
+<summary><strong>v0.2.1</strong></summary>
+
+- Fixed ignore format for **pycache** in git
 </details>
 
 <details>

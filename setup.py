@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="frenchmaid",
-    version="0.2.1",
+    version="0.2.3",
     description="Remove all pests from your project! frenchmaid is a lightweight all platform cli package that will delete all pycache and other folders (contents included) in your project directory. Are you tired of doing it manually each time? Fear not, the frenchmaid will do it for you!",
     long_description=long_description,
     long_description_content_type="text/markdown",
