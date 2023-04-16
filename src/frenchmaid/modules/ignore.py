@@ -1,8 +1,9 @@
+from typing import List
 
 def git(directory: str) -> None:
     try:
         f = open(".gitignore", "x")
-        f.write("__pycache__/*\n.mypy_cache/")
+        f.write("__pycache__/\n.mypy_cache/")
         f.close()
         print(f'\nSuccessfully created a ".gitignore" in your "{directory}" folder. It now ignores all pycache and mypy cache folders!')
         return
@@ -10,10 +11,10 @@ def git(directory: str) -> None:
         f_read = open(".gitignore", "r")
         f_write = open(".gitignore", "a")
         f_data = f_read.read()
-        array: list[str] = []
+        array: List[str] = []
 
-        if "__pycache__/*" not in f_data:
-            f_write.write("\n__pycache__/*")
+        if "__pycache__/" not in f_data:
+            f_write.write("\n__pycache__/")
             array.append('pycache')
 
         if ".mypy_cache/" not in f_data:
@@ -45,7 +46,7 @@ def docker(directory: str) -> None:
         f_read = open(".dockerignore", "r")
         f_write = open(".dockerignore", "a")
         f_data = f_read.read()
-        array: list[str] = []
+        array: List[str] = []
 
         if "*__pycache__*" not in f_data:
             f_write.write("\n*__pycache__*")

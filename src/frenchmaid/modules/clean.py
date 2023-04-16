@@ -1,4 +1,5 @@
 import os, shutil, sys
+from typing import List
 
 platf: str = sys.platform
 
@@ -9,10 +10,10 @@ def delDir(dir_select: str) -> bool:
     except:
         return False
 
-def loopDirsOne(main_dir: str, dir_arr: list[str], num_pycache: int, dir_arr_used: list[str], dir_to_delete: str) -> list[str]:
+def loopDirsOne(main_dir: str, dir_arr: List[str], num_pycache: int, dir_arr_used: List[str], dir_to_delete: str) -> List[str]:
     iterats: int = num_pycache
-    arr: list[str] = dir_arr_used
-    arr2: list[str] = dir_arr_used
+    arr: List[str] = dir_arr_used
+    arr2: List[str] = dir_arr_used
 
     if "pyvenv.cfg" not in dir_arr:
         for dir in dir_arr:
@@ -35,7 +36,7 @@ def loopDirsOne(main_dir: str, dir_arr: list[str], num_pycache: int, dir_arr_use
                         other_dir = f"{main_dir}/{dir}"
 
                     try:
-                        other_dirs: list[str] = os.listdir(other_dir)
+                        other_dirs: List[str] = os.listdir(other_dir)
 
                         if platf == "win32":
                             iterats_two = loopDirsOne(other_dir, other_dirs, iterats, arr, dir_to_delete)
@@ -52,10 +53,10 @@ def loopDirsOne(main_dir: str, dir_arr: list[str], num_pycache: int, dir_arr_use
     else:
         return arr2
 
-def loopDirsAll(main_dir: str, dir_arr: list[str], num_pycache: int, dir_arr_used: list[str]) -> list[str]:
+def loopDirsAll(main_dir: str, dir_arr: List[str], num_pycache: int, dir_arr_used: List[str]) -> List[str]:
     iterats: int = num_pycache
-    arr: list[str] = dir_arr_used
-    arr2: list[str] = dir_arr_used
+    arr: List[str] = dir_arr_used
+    arr2: List[str] = dir_arr_used
 
     if "pyvenv.cfg" not in dir_arr:
         for dir in dir_arr:
@@ -78,7 +79,7 @@ def loopDirsAll(main_dir: str, dir_arr: list[str], num_pycache: int, dir_arr_use
                         other_dir = f"{main_dir}/{dir}"
 
                     try:
-                        other_dirs: list[str] = os.listdir(other_dir)
+                        other_dirs: List[str] = os.listdir(other_dir)
 
                         if platf == "win32":
                             iterats_two = loopDirsAll(other_dir, other_dirs, iterats, arr)
@@ -103,10 +104,10 @@ def clean(dir_main: str, folder: str) -> None:
         else:
             dir_name = dir_main[str(dir_main).rfind("/")+1:len(dir_main)]
             
-        dirs: list[str] = os.listdir(dir_main)
+        dirs: List[str] = os.listdir(dir_main)
         num_dirs: int = len(dirs)
-        arr: list[str] = []
-        array_thing: list[str] = []
+        arr: List[str] = []
+        array_thing: List[str] = []
 
         if folder == 'all':
             array_thing = loopDirsAll(dir_main, dirs, 0, arr)

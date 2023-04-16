@@ -2,7 +2,7 @@
 import typer
 
 from typing import Optional
-from frenchmaid import __app_name__, __version__
+from . import __app_name__, __version__
 
 from .switches import cleanSwitch as clS, ignoreSwitch as igS
 
@@ -30,7 +30,7 @@ def main(
 
 @app.command(help="Delete all instances of junk folders")
 def clean(folder: Optional[str] = typer.Argument(None, help="pycache, mypy")) -> None:
-    if (folder):
+    if folder:
         cleanSwitch.indirect(folder)
     else:
         cleanSwitch.indirect("all")
@@ -38,5 +38,5 @@ def clean(folder: Optional[str] = typer.Argument(None, help="pycache, mypy")) ->
 
 @app.command(help="Add junk folders to ignore files", no_args_is_help=True)
 def ignore(platform: Optional[str] = typer.Argument(..., help="git, docker")) -> None:
-    ignoreSwitch.indirect(platform)
+    ignoreSwitch.indirect(platform if platform else "")
     raise typer.Exit()

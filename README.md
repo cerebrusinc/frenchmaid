@@ -2,7 +2,7 @@
     <img src="https://static.wixstatic.com/media/916fb4_88bd4d4d46e14f0c90f64213970c3a2d~mv2.png/v1/fill/w_750,h_750,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/916fb4_88bd4d4d46e14f0c90f64213970c3a2d~mv2.png" alt="frenchmaid logo" width="250" height="250" />
 </p>
 
-# frenchmaid v0.2.0
+# frenchmaid v0.2.1
 
 Are you a python developer who also/only uses windows and are sick and tired of constantly deteting those pesky `__pycache__` directories? Fear not, **frenchmaid** is here to help! frenchmaid is a CLI app written in pure python that will search your entire project directory and delete any `__pycache__` or other folders (and the files within) in your root directory. Now it can also add these folders to your ignore files!
 
@@ -90,13 +90,13 @@ It's really that simple, just ensure that you are in your project's root directo
 <br />
 
     example-app
-    ├── main.py
+    ├── LICENSE
     ├── requirements.txt
     └── src
          └── __init__.py
          └── app.py
 
-If the root is `example-app` then you can see that the terminal should be in that folder.
+If the root is `example-app` then you can see that the terminal should be in that dir.
 
 ## Commands
 
@@ -143,7 +143,7 @@ or
 
 will return (for example):
 
-    frenchmaid v0.2.0
+    frenchmaid v0.2.1
 
 ### Help
 
@@ -173,11 +173,22 @@ Note that this option can also be used in tandem with any command.
 
 You can report any bugs or improvements [here](https://github.com/lewisjr/home-app/issues), I will try to address them as soon as possible. Feel free to suggest any other files or folders you think it should delete (e.g .pytest_cache) with all context on how they appear. I will happily make it a possibility without breaking the current format! To the best of my abilities of course, and the github page will be updated on any changes.
 
-# Version History
+# Changelog
 
-## v0.2.0
+## v0.2.x
 
-**Major Patch**
+<details open>
+<summary><strong>v0.2.1</strong></summary>
+
+- Codebase improvements
+- Full parity between `windows` and `linux` systems; **Full Stability**
+- Added .gitignore
+- README structure changed
+- Note added to v0.2.0 to denote it's instability
+</details>
+
+<details>
+<summary><strong>v0.2.0</strong></summary>
 
 - Added a logo to the README
 - Added instructions for a Linux PATH error
@@ -188,21 +199,32 @@ You can report any bugs or improvements [here](https://github.com/lewisjr/home-a
 - Moved all functions to a modules folder
 - Added a class switch
 - Typed modules
+- Unstable on linux bases systems
 
-## v0.1.2
+</details>
+<br />
 
-**Minor patch 2**
+## v0.1.x
+
+<details>
+<summary><strong>v0.1.2</strong></summary>
 
 - License has been updated to Apache from MIT effective from the date of this release
 - Notes on potential path problems that can arise from installation on Windows have been added to the README
 
-## v0.1.1
+</details>
 
-**Minor patch**
+<details>
+<summary><strong>v0.1.1</strong></summary>
 
 - Issue on linux machines fixed with directory name post pycache delete
   - The package no longer displays the root directory's full absolute path (e.g Documents/example-app), but rather just the root directory's name (e.g example-app) on linux machines.
 
-## v0.1.0
+</details>
 
-Initial Release; Stable version for use on all platforms.
+<details>
+<summary><strong>v0.1.0</strong></summary>
+
+- Initial Release; Stable version for use on all platforms
+
+</details>
